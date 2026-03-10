@@ -6,9 +6,9 @@ A modern disease prediction application built with **React** (Frontend) and **Fa
 
 The easiest way to run the app is to use the included startup script:
 
-1.  Double-click **`start_app.bat`** in this folder.
-2.  Wait for the installation to complete (first time only).
-3.  The app will open automatically at [http://localhost:3000](http://localhost:3000).
+1. Double-click **start_app.bat** in this folder.
+2. Wait for the installation to complete (first time only).
+3. The app will open automatically at http://localhost:3000.
 
 ---
 
@@ -23,17 +23,3 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 python -m uvicorn server:app --reload --port 8000
-```
-
-### 2. Start Frontend
-```bash
-cd frontend
-npm install
-npm start
-```
-
-## 📱 Features
-- **Diabetes Prediction**: Assess risk based on health metrics.
-- **Heart Disease**: Cardiovascular health analysis.
-- **Kidney Health**: Renal function indicators.
-- **AI Assistant**: Analyze medical reports (requires API key).
