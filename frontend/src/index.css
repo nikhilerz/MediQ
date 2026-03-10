@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: 30 58 47;
+        --color-secondary: 46 125 50;
+        --color-accent: 76 175 80;
+        --color-background: 255 255 255;
+        --color-surface: 248 249 250;
+        --color-muted: 102 102 102;
+        --color-text-base: 17 24 39;
+        --color-card-bg: 255 255 255;
+        --color-border: 243 244 246;
+    }
+
+    :root.dark {
+        --color-primary: 76 175 80;
+        --color-secondary: 129 199 132;
+        --color-accent: 165 214 167;
+        --color-background: 15 23 19;
+        --color-surface: 30 41 35;
+        --color-muted: 156 163 175;
+        --color-text-base: 243 244 246;
+        --color-card-bg: 30 41 35;
+        --color-border: 45 58 51;
+    }
+
+    body {
+        @apply bg-background text-text-base font-sans antialiased transition-colors duration-300;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-bold text-primary transition-colors duration-300;
+    }
+
+    nav {
+        @apply transition-colors duration-300;
+    }
+}
+
+.glass-card {
+    @apply bg-card-bg/80 backdrop-blur-lg border border-white/10 shadow-xl transition-all duration-300;
+}
+
+.dark .nav-link-active {
+    @apply bg-primary/20 text-primary;
+}
+
+/* Global transition for theme switch */
+* {
+    @apply transition-colors duration-300 border-gray-100 dark:border-white/5;
+}
+
+/* Fix for background in dark mode */
+.dark body {
+    @apply bg-background;
+}

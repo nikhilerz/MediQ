@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+pymongo
+motor
+python-dotenv
+pydantic
+scikit-learn
+numpy
+pandas
+pillow
+pypdf2
+google-generativeai
+openai
+

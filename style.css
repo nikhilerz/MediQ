@@ -1,0 +1,254 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2E7D32;
+    /* Medical Green */
+    --primary-dark: #1E3A2F;
+    /* Dark Green Text */
+    --accent-color: #4CAF50;
+    /* Button Green */
+    --bg-color: #FFFFFF;
+    --text-color: #333333;
+    --light-bg: #F8F9FA;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Hide Default Streamlit Elements */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Custom Navbar (Simulated) */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Prediction Result Card */
+.prediction-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 6px solid var(--accent-color);
+    margin-top: 24px;
+    box-shadow: var(--card-shadow);
+}
+
+.prediction-card.negative {
+    border-left-color: #F44336;
+    background-color: #FFF5F5;
+}
+
+.prediction-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+.prediction-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Input Styles */
+.stTextInput>label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stTextInput>div>div>input {
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    padding: 10px 12px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+/* Button Styling (Primary) */
+.stButton>button {
+    background-color: var(--primary-dark);
+    color: white;
+    border-radius: 50px;
+    /* Pill shape */
+    border: none;
+    padding: 12px 32px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    /* Full width on mobile, auto on desktop handled by col */
+}
+
+.stButton>button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 16px rgba(46, 125, 50, 0.2);
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Chat Interface Customization */
+.stChatMessage {
+    background-color: transparent;
+}
+
+.stChatMessage[data-testid="stChatMessage"]:nth-child(odd) {
+    /* User message */
+    background-color: rgba(46, 125, 50, 0.05);
+    border-radius: 12px;
+}
+
+/* Hero Section Typography */
+h1 {
+    font-weight: 800 !important;
+    color: var(--primary-dark) !important;
+    text-align: center;
+    margin-bottom: 1rem !important;
+}
+
+p.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Icon box for Hero */
+.hero-icon {
+    font-size: 4rem;
+    color: white;
+    background: var(--accent-color);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Slogan Pill for Hero Section */
+.slogan-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background-color: rgba(46, 125, 50, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    min-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slogan-pill::after {
+    content: "Predict Early. Live Better.";
+    animation: slogan-rotate 12s infinite;
+}
+
+@keyframes slogan-rotate {
+
+    0%,
+    18% {
+        content: "Predict Early. Live Better.";
+        opacity: 1;
+    }
+
+    19% {
+        opacity: 0;
+    }
+
+    20%,
+    38% {
+        content: "Smart Health, Simplified.";
+        opacity: 1;
+    }
+
+    39% {
+        opacity: 0;
+    }
+
+    40%,
+    58% {
+        content: "Your Personal Health Intelligence.";
+        opacity: 1;
+    }
+
+    59% {
+        opacity: 0;
+    }
+
+    60%,
+    78% {
+        content: "Quick Insights. Better Care.";
+        opacity: 1;
+    }
+
+    79% {
+        opacity: 0;
+    }
+
+    80%,
+    98% {
+        content: "Where Data Meets Diagnosis.";
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        content: "Predict Early. Live Better.";
+        opacity: 1;
+    }
+}
